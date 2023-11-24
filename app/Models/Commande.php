@@ -7,6 +7,7 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Database\Factories\CommandesFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
@@ -26,7 +27,7 @@ use Laravel\Sanctum\HasApiTokens;
  *
  * @package App\Models
  */
-class Commande extends Model
+class Commande extends CommandesFactory
 {
     use HasApiTokens, HasFactory, Notifiable;
 

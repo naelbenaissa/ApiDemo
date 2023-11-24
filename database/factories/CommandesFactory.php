@@ -4,13 +4,11 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Client>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Commande>
  */
-class ClientFactory extends Factory
+class CommandesFactory extends Factory
 {
-
     /**
      * Define the model's default state.
      *
@@ -19,10 +17,10 @@ class ClientFactory extends Factory
     public function definition(): array
     {
         return [
-            'nom' => fake()->$this->firstName,
-            'prenom' => fake()->$this->lastName,
-            'email' => fake()->unique()->safeEmail(),
-            'password' => password_hash($this->faker->password, PASSWORD_DEFAULT),
+            'id_client' => $this->faker->numberBetween(1,10),
+            'id_produit' => $this->faker->numberBetween(1,10),
+            'quantite' => $this->faker->numberBetween(1,15),
+            'date' => $this->faker->date(),
         ];
     }
 

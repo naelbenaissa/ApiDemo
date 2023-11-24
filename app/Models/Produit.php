@@ -6,6 +6,7 @@
 
 namespace App\Models;
 
+use Database\Factories\ProduitsFactory;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -26,7 +27,7 @@ use Laravel\Sanctum\HasApiTokens;
  *
  * @package App\Models
  */
-class Produit extends Model
+class Produit extends ProduitsFactory
 {
     use HasApiTokens, HasFactory, Notifiable;
 

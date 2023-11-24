@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Client>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Produit>
  */
-class ClientFactory extends Factory
+class ProduitsFactory extends Factory
 {
 
     /**
@@ -19,10 +19,11 @@ class ClientFactory extends Factory
     public function definition(): array
     {
         return [
-            'nom' => fake()->$this->firstName,
-            'prenom' => fake()->$this->lastName,
-            'email' => fake()->unique()->safeEmail(),
-            'password' => password_hash($this->faker->password, PASSWORD_DEFAULT),
+            'nom' => $this->faker->word,
+            'description' => $this->faker->sentence,
+            'lien_image' => $this->faker->unique()->url,
+            'prix' => $this->faker->randomFloat(2, 1, 100),
+            'tva' => $this->faker->randomNumber(2) . $this->faker->randomNumber(3) . $this->faker->randomNumber(3),
         ];
     }
 
