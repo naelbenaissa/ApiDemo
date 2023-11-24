@@ -33,3 +33,6 @@ Route::post('/ajoutClient', [ClientsController::class, "ajouterClient"]);
 Route::get('/commandes', [CommandesController::class, "liste"]);
 Route::get('/commandes/{id}', [CommandesController::class, "detail"]);
 Route::post('/ajoutCommande', [CommandesController::class, "ajouterCommande"]);
+Route::get('/commandesClient/{idClient}', [CommandesController::class, "commandesClient"]);
+Route::get('/commandesClientProduits/{idClient}', [CommandesController::class, "commandesClientProduits"]);
+Route::delete('/supprimerCommande/{idCommande}', [CommandesController::class, "supprimerCommande"]);

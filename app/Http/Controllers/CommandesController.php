@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Models\Commande;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -38,6 +39,20 @@ class CommandesController extends Controller
 
     function commandesClient($idClient)
     {
+        return response()->json(Client::find($idClient)->commandes()->get());
+    }
+
+    function commandesClientProduits($idClient)
+    {
+        return response()->json(Client::find($idClient)->commandes()->with('produit')->get());
+    }
+
+    function supprimerCommande($idCommande)
+    {
+        Commande::destroy($idCommande);
+
+        return response()->json(['status' => "Commande supprimée"]);
 
     }
+
 }
