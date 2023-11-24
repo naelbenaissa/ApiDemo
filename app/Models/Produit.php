@@ -27,7 +27,7 @@ use Laravel\Sanctum\HasApiTokens;
  *
  * @package App\Models
  */
-class Produit extends ProduitsFactory
+class Produit extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
 

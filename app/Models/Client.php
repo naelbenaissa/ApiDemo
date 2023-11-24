@@ -26,7 +26,7 @@ use Laravel\Sanctum\HasApiTokens;
  *
  * @package App\Models
  */
-class Client extends ClientFactory
+class Client extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
 
