@@ -50,9 +50,7 @@ class CommandesController extends Controller
     function supprimerCommande($idCommande)
     {
         Commande::destroy($idCommande);
-
         return response()->json(['status' => "Commande supprimée"]);
-
     }
 
 }
