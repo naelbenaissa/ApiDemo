@@ -29,6 +29,7 @@ Route::post('ajoutProduit', [ProduitsController::class, "ajouterProduit"]);
 Route::get('clients', [ClientsController::class, "liste"]);
 Route::get('clients/{id}', [ClientsController::class, "detail"]);
 Route::post('ajoutClient', [ClientsController::class, "ajouterClient"]);
+Route::post('authentification', [ClientsController::class, 'authentifierClient']);
 
 Route::get('commandes', [CommandesController::class, "liste"]);
 Route::get('commandes/{id}', [CommandesController::class, "detail"]);

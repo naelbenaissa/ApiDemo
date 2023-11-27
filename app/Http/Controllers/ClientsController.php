@@ -37,4 +37,21 @@ class ClientsController extends Controller
         return response()->json(['status' => "Client ajouté", 'data' => $client]);
     }
 
+    function authentifierClient(Request $request){
+        $email = $request->email;
+        $password = $request->password;
+
+        $client = Client::where('email', $email)->first();
+
+        if ($client) {
+            //if (password_verify($password, $client->password)) {
+            if ($password === $client->password) {
+                return $client;
+            } else {
+                return response()->json(['Erreur' => 'Mot de passe Incorrect'], 401);
+            }
+        } else {
+            return response()->json(['Erreur' => 'Le client n\'existe pas'], 404);
+        }
+    }
 }
