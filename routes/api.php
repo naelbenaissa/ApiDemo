@@ -21,19 +21,19 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// http://localhost:8000/api/
+Route::get('produits', [ProduitsController::class, "liste"]);
+Route::get('produits/{id}', [ProduitsController::class, "detail"]);
+Route::post('ajoutProduit', [ProduitsController::class, "ajouterProduit"]);
 
-Route::get('/produits', [ProduitsController::class, "liste"]);
-Route::get('/produits/{id}', [ProduitsController::class, "detail"]);
-Route::post('/ajoutProduit', [ProduitsController::class, "ajouterProduit"]);
+Route::get('clients', [ClientsController::class, "liste"]);
+Route::get('clients/{id}', [ClientsController::class, "detail"]);
+Route::post('ajoutClient', [ClientsController::class, "ajouterClient"]);
 
-Route::get('/clients', [ClientsController::class, "liste"]);
-Route::get('/clients/{id}', [ClientsController::class, "detail"]);
-Route::post('/ajoutClient', [ClientsController::class, "ajouterClient"]);
+Route::get('commandes', [CommandesController::class, "liste"]);
+Route::get('commandes/{id}', [CommandesController::class, "detail"]);
+Route::post('ajoutCommande', [CommandesController::class, "ajouterCommande"]);
 
-Route::get('/commandes', [CommandesController::class, "liste"]);
-Route::get('/commandes/{id}', [CommandesController::class, "detail"]);
-Route::post('/ajoutCommande', [CommandesController::class, "ajouterCommande"]);
-
-Route::get('/commandesClient/{idClient}', [CommandesController::class, "commandesClient"]);
-Route::get('/commandesClientProduits/{idClient}', [CommandesController::class, "commandesClientProduits"]);
-Route::delete('/supprimerCommande/{idCommande}', [CommandesController::class, "supprimerCommande"]);
+Route::get('commandesClient/{idClient}', [CommandesController::class, "commandesClient"]);
+Route::get('commandesClientProduits/{idClient}', [CommandesController::class, "commandesClientProduits"]);
+Route::delete('supprimerCommande/{idCommande}', [CommandesController::class, "supprimerCommande"]);
