@@ -21,7 +21,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+/*
+Route::group(['prefix' => 'clients', 'middleware' => 'auth:sanctum'], function () {
+    Route::get('/', [ClientsController::class, 'liste']);
+    Route::get('/{id}', [ClientsController::class, 'detail']);
+});
+*/
 Route::get('/produits', [ProduitsController::class, "liste"]);
 Route::get('/produits/{id}', [ProduitsController::class, "detail"]);
 Route::post('/ajoutProduit', [ProduitsController::class, "ajouterProduit"]);
