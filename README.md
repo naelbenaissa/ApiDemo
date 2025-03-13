@@ -2,49 +2,56 @@
 
 # ApiDemo - Laravel API
 
-Ce projet, nommé "ApiDemo", est une API Laravel développée à des fins d'apprentissage lors de mes cours en deuxième année de BTS SIO. L'objectif principal de cette API est de fournir un exemple simple de la création d'une API RESTful avec Laravel.
+This project, named **"ApiDemo"**, is a Laravel API developed for learning purposes during my second year of **BTS SIO**. The main objective of this API is to provide a simple example of creating a **RESTful API** with Laravel.
 
-## Fonctionnalités
+## Features
 
-- **Endpoints :** L'API offre des endpoints pour interagir avec différentes ressources.
-  
-- **CRUD Operations :** Implémente les opérations CRUD (Create, Read, Update, Delete) pour démontrer le fonctionnement de base.
+- **Endpoints:** The API provides multiple endpoints to interact with different resources.  
+- **CRUD Operations:** Implements CRUD (Create, Read, Update, Delete) operations to demonstrate basic functionality.
 
-## Installation et Configuration
+## Installation and Setup
 
-1. **Cloner le projet :**
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/nbena69/ApiDemo.git
+   git clone https://github.com/naelbenaissa/ApiDemo.git
+   ```
 
-2. **Installer les dépendances :**
+2. **Install dependencies:**
    ```bash
    cd ApiDemo
    composer install
+   ```
 
-3. **Configurer la base de données :**
-- Créez une copie du fichier .env.example et renommez-le en .env.
-- Configurez les paramètres de la base de données dans le fichier .env.
+3. **Configure the database:**
+   - Create a copy of the `.env.example` file and rename it to `.env`.
+   - Configure your database settings inside the `.env` file.
 
-4. **Effectuer les migrations et les seeds :**
+4. **Run migrations and seeders:**
    ```bash
    php artisan migrate --seed
+   ```
 
-5. **Lancer le serveur de développement :**
+5. **Start the development server:**
    ```bash
-    php artisan serve
+   php artisan serve
+   ```
 
 ## Contributions
 
-Si vous souhaitez contribuer à ce projet, suivez ces étapes :
+If you would like to contribute to this project, follow these steps:
 
-1. Fork du projet
-2. Créez une branche pour votre fonctionnalité
+1. **Fork the repository**  
+2. **Create a new branch for your feature**  
    ```bash
-   git checkout -b feature/NouvelleFonctionnalite
-3. Commit de vos modifications
+   git checkout -b feature/NewFeature
+   ```
+3. **Commit your changes**  
    ```bash
-   git commit -am 'Ajout de la nouvelle fonctionnalité'
-4. Push vers la branche
+   git commit -am 'Added a new feature'
+   ```
+4. **Push the branch to your repository**  
    ```bash
-   git push origin feature/NouvelleFonctionnalite
-5. Créez une Pull Request
+   git push origin feature/NewFeature
+   ```
+5. **Create a Pull Request**
+
